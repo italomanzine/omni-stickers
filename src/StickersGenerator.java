@@ -26,7 +26,7 @@ public class StickersGenerator {
         }
     }
 
-    public void generateStickers(InputStream inputStream, String nomeArquivo, String rank) throws Exception {
+    public void generateStickers(InputStream inputStream, String nomeArquivo) throws Exception {
         // leitura de imagem
         BufferedImage originalImage = ImageIO.read(inputStream);
 
@@ -57,7 +57,7 @@ public class StickersGenerator {
         graphics.setFont(font);
 
         // adicionar contorno ao texto
-        String text = "rank: " + rank; // usar o rank do filme aqui
+        String text = "NICE!";
         FontRenderContext frc = graphics.getFontRenderContext();
         GlyphVector gv = font.createGlyphVector(frc, text);
         double textWidth = gv.getVisualBounds().getWidth();
